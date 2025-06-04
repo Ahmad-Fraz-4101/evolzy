@@ -101,37 +101,45 @@ window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
 
 // Initialize sliders
-function initSliders() {
+document.addEventListener('DOMContentLoaded', function() {
     // Video Slider
-    const videoSlider = document.querySelector('.video-slider');
     const videoSlides = document.querySelectorAll('.video-slide');
     const videoPrevBtn = document.querySelector('.video-showcase .slider-nav.prev');
     const videoNextBtn = document.querySelector('.video-showcase .slider-nav.next');
     let currentVideoSlide = 0;
 
     // Reviews Slider
-    const reviewsSlider = document.querySelector('.reviews-slider');
     const reviewSlides = document.querySelectorAll('.review-slide');
     const reviewPrevBtn = document.querySelector('.reviews-section .review-nav.prev');
     const reviewNextBtn = document.querySelector('.reviews-section .review-nav.next');
     let currentReviewSlide = 0;
 
-    // Update slider position
-    function updateSliderPosition(slider, currentSlide, totalSlides) {
-        const slideWidth = slider.offsetWidth;
-        slider.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+    function updateVideoSlider() {
+        // Remove active class from all slides
+        videoSlides.forEach(slide => slide.classList.remove('active'));
+        // Add active class to current slide
+        videoSlides[currentVideoSlide].classList.add('active');
+    }
+
+    function updateReviewSlider() {
+        reviewSlides.forEach(slide => slide.classList.remove('active'));
+        reviewSlides[currentReviewSlide].classList.add('active');
     }
 
     // Video slider controls
     if (videoPrevBtn && videoNextBtn) {
         videoPrevBtn.addEventListener('click', () => {
-            currentVideoSlide = (currentVideoSlide - 1 + videoSlides.length) % videoSlides.length;
-            updateSliderPosition(videoSlider, currentVideoSlide, videoSlides.length);
+            if (currentVideoSlide > 0) {
+                currentVideoSlide--;
+                updateVideoSlider();
+            }
         });
 
         videoNextBtn.addEventListener('click', () => {
-            currentVideoSlide = (currentVideoSlide + 1) % videoSlides.length;
-            updateSliderPosition(videoSlider, currentVideoSlide, videoSlides.length);
+            if (currentVideoSlide < videoSlides.length - 1) {
+                currentVideoSlide++;
+                updateVideoSlider();
+            }
         });
     }
 
@@ -139,28 +147,19 @@ function initSliders() {
     if (reviewPrevBtn && reviewNextBtn) {
         reviewPrevBtn.addEventListener('click', () => {
             currentReviewSlide = (currentReviewSlide - 1 + reviewSlides.length) % reviewSlides.length;
-            updateSliderPosition(reviewsSlider, currentReviewSlide, reviewSlides.length);
+            updateReviewSlider();
         });
 
         reviewNextBtn.addEventListener('click', () => {
             currentReviewSlide = (currentReviewSlide + 1) % reviewSlides.length;
-            updateSliderPosition(reviewsSlider, currentReviewSlide, reviewSlides.length);
+            updateReviewSlider();
         });
     }
 
     // Initialize positions
-    updateSliderPosition(videoSlider, currentVideoSlide, videoSlides.length);
-    updateSliderPosition(reviewsSlider, currentReviewSlide, reviewSlides.length);
-
-    // Update positions on window resize
-    window.addEventListener('resize', () => {
-        updateSliderPosition(videoSlider, currentVideoSlide, videoSlides.length);
-        updateSliderPosition(reviewsSlider, currentReviewSlide, reviewSlides.length);
-    });
-}
-
-// Call initSliders when the DOM is loaded
-document.addEventListener('DOMContentLoaded', initSliders);
+    updateVideoSlider();
+    updateReviewSlider();
+});
 
 // Auto-play videos when they come into view
 const videos = document.querySelectorAll('video');

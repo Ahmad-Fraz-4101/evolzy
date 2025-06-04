@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolzy - Crafting Content that Evolves</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="Evolzy Logo" class="logo-img">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Crafting Content that <span class="accent">Evolves</span></h1>
+                    <p>Transform your vision into compelling digital experiences with our expert team.</p>
+                    <a href="#contact" class="btn">Get Started</a>
+                </div>
+                <div class="hero-image">
+                    <img src="images/logo.png" alt="Evolzy Logo" class="hero-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <p class="section-subtitle">Comprehensive video editing solutions to help your content grow and evolve</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎬</div>
+                    <h3>Video Editing</h3>
+                    <p>Professional video editing services for your content needs</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Shorts Editing</h3>
+                    <p>Engaging short-form content optimized for social media platforms</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎥</div>
+                    <h3>Content Creation</h3>
+                    <p>Full-service video production and content strategy</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">✨</div>
+                    <h3>Motion Graphics</h3>
+                    <p>Dynamic animations and visual effects to enhance your videos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About <span class="accent">Evolzy</span></h2>
+                    <p>We're a team of passionate video editors and content creators dedicated to transforming raw footage into compelling visual stories. Our mission is to help creators and businesses make their mark through high-quality video content that engages and inspires.</p>
+                    <p>From short-form social media content to professional video editing, we combine technical expertise with creative vision to deliver videos that not only meet but exceed expectations. We specialize in creating content that resonates with your audience and helps you stand out in the digital landscape.</p>
+                </div>
+                <div class="about-image">
+                    <div class="about-icon">💡</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Our Portfolio</h2>
+            <p class="section-subtitle">Explore our latest video editing projects and see how we've helped businesses evolve</p>
+            
+            <!-- Video Showcase Slider -->
+            <div class="video-showcase">
+                <div class="video-slider">
+                    <div class="video-slide">
+                        <div class="video-container">
+                            <video controls poster="images/thumbnail1.jpeg">
+                                <source src="videos/service3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-info">
+                                <h3>Services We Offer</h3>
+                                <p>Professional video editing for content creators</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-slide">
+                        <div class="video-container">
+                            <video controls poster="images/thumbnail2.jpeg">
+                                <source src="videos/service2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-info">
+                                <h3>Product Showcase</h3>
+                                <p>Engaging product demonstration videos</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-slide">
+                        <div class="video-container">
+                            <video controls poster="images/thumbnail3.jpeg">
+                                <source src="videos/services.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-info">
+                                <h3>Social Media Content</h3>
+                                <p>Viral-worthy short-form content</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-nav prev" aria-label="Previous video">❮</button>
+                <button class="slider-nav next" aria-label="Next video">❯</button>
+            </div>
+
+            <!-- Client Reviews -->
+            <div class="reviews-section">
+                <h3>Trusted by Our Valued Clients</h3>
+                <div class="reviews-slider">
+                    <div class="review-slide">
+                        <div class="review-cover">
+                            <img src="images/review1.jpeg" alt="Project Showcase 1" class="review-image">
+                        </div>
+                    </div>
+                    <div class="review-slide">
+                        <div class="review-cover">
+                            <img src="images/review2.jpeg" alt="Project Showcase 2" class="review-image">
+                        </div>
+                    </div>
+                    <div class="review-slide">
+                        <div class="review-cover">
+                            <img src="images/review3.jpeg" alt="Project Showcase 3" class="review-image">
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews-nav">
+                    <button class="review-nav prev" aria-label="Previous image">❮</button>
+                    <button class="review-nav next" aria-label="Next image">❯</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Let's Evolve Together</h2>
+            <p class="section-subtitle">Ready to take your video content to the next level? Get in touch with us today.</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <h3>Email</h3>
+                        <a href="mailto:evolzystudios@gmail.com" class="contact-link">evolzystudios@gmail.com</a>
+                    </div>
+                    <div class="info-item">
+                        <h3>WhatsApp</h3>
+                        <a href="https://wa.me/923363334101" target="_blank" class="contact-link">+92 336 3334101</a>
+                    </div>
+                    <div class="info-item">
+                        <h3>Location</h3>
+                        <p>Pakistan</p>
+                    </div>
+                    <div class="social-links">
+                        <h3>Follow Us on LinkedIn</h3>
+                        <div class="social-icons">
+
+                            <a href="#" aria-label="LinkedIn">💼</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Evolzy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
